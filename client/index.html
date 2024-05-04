@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+      integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/script.js" defer></script>
+    <title>Chat App</title>
+  </head>
+  <body class="h-screen flex items-center bg-slate-100 text-[#2c2c2c]">
+    <div
+      class="w-[80%] h-[90dvh] bg-white rounded-lg flex flex-col mx-auto overflow-hidden px-10 py-10"
+    >
+      <h1 class="font-bold text-4xl shrink-0">Chat room</h1>
+      <ul class="overflow-scroll grow py-10 space-y-5" id="messages"></ul>
+      <form id="form" class="flex gap-4 shrink-0">
+        <input
+          type="text"
+          id="message"
+          class="grow rounded-lg bg-slate-100 px-6 py-4"
+          placeholder="Add a message here"
+        />
+        <button
+          class="shrink-0 text-white px-4 py-3 rounded-lg bg-slate-900 hover:opacity-90 transition-opacity duration-300"
+        >
+          Send
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

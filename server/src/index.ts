@@ -2,10 +2,8 @@ import express from 'express'
 import { CorsOptions } from 'cors'
 import { config } from 'dotenv'
 config()
-import './config/db'
 import initServer from './server'
 import initSocket from './socket'
-import connectToDB from './config/db'
 
 const options: CorsOptions = {
   origin: '*',
@@ -14,8 +12,6 @@ const options: CorsOptions = {
 }
 
 const app = express()
-
-connectToDB()
 
 const server = initServer({
   app,
